@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pole trójkąta JavaScript</title>
+</head>
+<body>
+
+    <script> 
+    var a = Number(prompt("Podaj długość boku a: ",""));
+    var b = Number(prompt("Podaj długość boku b: ",""));
+    var c = Number(prompt("Podaj długość boku c: ",""));
+	
+
+ if (a<=0 || b<=0 || c<=0) 
+ {
+	document.write ("Trójkąt nie istnieje, bok nie może być ujemny!" + "<br>");
+	end();
+	
+ }
+
+ else  
+ {
+	 if((a+b)>c && (a+c)>b && (b+c)>a)
+	 {
+		document.write("Boki trójkąta są właściwe","<br>");
+	 }
+	 else 
+	 {
+		document.write("Boki trójkąta nie są właściwe","<br>"); 
+		end();
+	 }
+ }
+ 
+	var obwod = a + b + c;
+	var p = obwod/2;
+	var pol1 = p*(p-a)*(p-b)*(p-c);
+	var pole = Math.sqrt(pol1);
+	
+	document.write ("Obwód trójkąta wynosi: " + obwod + "<br>");
+	document.write ("Pole trójkąta wynosi: " + pole + "<br>");
+ 
+    </script>
+</body>
+</html>

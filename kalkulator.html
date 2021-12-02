@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script>
+			function negacja(a)
+		</script>
+		
+	</head>
+	<body>
+		
+		<form name="Kalkulator">
+			<div>Kalkulator v.420</div>
+			<br>
+			<table border="3">
+				<tr>
+					<td><input type="text" name="Liczby" size="14" style="font-size:18;"></td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button"  value="  1  " onclick="document.Kalkulator.Liczby.value += '1'" />
+						<input type="button"  value="  2  " onclick="document.Kalkulator.Liczby.value += '2'" />
+						<input type="button"  value="  3  " onclick="document.Kalkulator.Liczby.value += '3'" /> <br>
+						<input type="button"  value="  4  " onclick="document.Kalkulator.Liczby.value += '4'" />
+						<input type="button"  value="  5  " onclick="document.Kalkulator.Liczby.value += '5'" />
+						<input type="button"  value="  6  " onclick="document.Kalkulator.Liczby.value += '6'" /> <br>
+						<input type="button"  value="  7  " onclick="document.Kalkulator.Liczby.value += '7'" />
+						<input type="button"  value="  8  " onclick="document.Kalkulator.Liczby.value += '8'" />
+						<input type="button"  value="  9  " onclick="document.Kalkulator.Liczby.value += '9'" /> <br>
+						<input type="button"  value="  0  " onclick="document.Kalkulator.Liczby.value += '0'" /> 
+
+						<input type="button" style="width: 40px" value=" . " onclick="document.Kalkulator.Liczby.value += '.'" />
+						<input type="button" style="width: 40px" value="  +  " onclick="document.Kalkulator.Liczby.value += '+'" />
+						<input type="button" style="width: 40px" value="  -  " onclick="document.Kalkulator.Liczby.value += '-'" /> <br>
+						<input type="button" style="width: 40px" value="  x  " onclick="document.Kalkulator.Liczby.value += '*'" />
+						<input type="button" style="width: 40px" value="  /  " onclick="document.Kalkulator.Liczby.value += '/'" />
+						<br>
+
+						<br>
+						<input type="button" style="width:82px; height:30px; font-size:20"  value="czyść"  onclick="document.Kalkulator.Liczby.value = ''" />
+						<input type="button" style="width: 83px; height:30px; font-size:20 " value="  =  " onclick="document.Kalkulator.Liczby.value = eval(Kalkulator.Liczby.value)" />
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body>
+	<form>
+		Podaj nick <input type="text" id="nick">
+		Podaj hasło <input type="text" id="haslo">
+	<input type="button" onclick="zaloguj()" value="loguj">
+	</form>
+	<script>
+		function zaloguj(){
+			var nick=document.getElementById("nick").value;
+			var haslo=document.getElementById("haslo").value;
+			if(nick=="nyk" && haslo=="maslo"){
+				window.open("https://www.onet.pl/");
+			}
+			else{
+				alert("Przyko mi, nie jesteś uprawniony do obejrzenia strony");
+			}
+		}
+	</script>
+</body> 
+</html>

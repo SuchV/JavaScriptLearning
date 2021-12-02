@@ -1,0 +1,31 @@
+
+
+<!DOCTYPE html>
+<html>
+ <head><meta charset="UTF-8">
+    <style>
+        div{
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+</head>
+ <body>
+	<div></div>
+	<form>
+		Wprowadź wartośc koloru od 0 do 100
+		<input type="text" id="szary"><br>
+		<input type="button" value="Ustaw kolor" onclick="choose()">
+	</form>
+ <script>
+     function choose () {
+         var szary = document.getElementById('szary').value ;
+         var div = document.querySelector('div') ;
+         div.style.backgroundColor = "rgb("+szary+"%,"+szary+"%,"+szary+"%)" ;
+        
+        }
+ </script>
+
+</body>
+</html>
+
