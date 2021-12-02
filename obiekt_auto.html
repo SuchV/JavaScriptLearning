@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8">
+ </head>
+ <body>
+    <script>
+        var poj={
+            marka:'Opel',
+            model:'Corsa',
+            rok_produkcji:'2002',
+            przebieg:'TylkoWNiedzieleJezdzila',
+            pokaz_dane: function(){
+            document.write(this.marka+'<br>'+this.model+'<br>'+this.rok_produkcji+'<br>'+this.przebieg+'<br>');
+            }
+        }
+        poj.pokaz_dane();
+        poj.nr_rejestracji='UWU420420';
+        poj.pokaz_dane_nr_rejestracji=function(){
+        document.write(this.marka+' '+this.nr_rejestracji);
+        }
+        poj.pokaz_dane_nr_rejestracji();
+    </script>
+ </body>
+</html>

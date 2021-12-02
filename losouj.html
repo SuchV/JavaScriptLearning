@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+ <head><meta charset="UTF-8">
+	<style>
+		#div1, #div2, #div3{
+            width: 250px;
+            height: 250px;
+            margin-left: 50px;
+            float: left;
+		}
+	</style>
+ </head>
+	<body onload="losuj()">
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<div id="div3">
+	<form>
+		<input type="button" value="Ustaw kolor" onclick="losuj()"><br><br>
+		<input type="button" value="Jaśniej" onclick="jasniej()">
+		<input type="button" value="Ciemniej" onclick="ciemniej()">
+	</form>
+	<h3 id="wynik1"></h3>
+	<h3 id="wynik2"></h3>
+	<h3 id="wynik3"></h3>
+	</div>
+	<script>
+		var kolor1 = 50;
+		var kwadrat1 = document.getElementById('div1');
+		var kwadrat2 = document.getElementById('div2');
+		var losowynumer;
+	function losuj(){
+		losowynumer = Math.floor(Math.random() * 100);  // 0,8 *100 = 80
+		kwadrat1.style.backgroundColor = "rgb("+losowynumer+"%,"+losowynumer+"%,"+losowynumer+"%)";
+		kwadrat2.style.backgroundColor = ("rgb("+kolor1+"%,"+kolor1+"%,"+kolor1+"%)");
+		pokaz();
+	}
+	function jasniej(){
+		kolor1=kolor1+1;
+		kwadrat2.style.backgroundColor = ("rgb("+kolor1+"%,"+kolor1+"%,"+kolor1+"%)");
+		document.getElementById('wynik2').innerHTML="Kwadrat edytowany "+kolor1;
+		if(losowynumer==kolor1){document.getElementById('wynik3').innerHTML="Równe Wartości"}
+		else if(losowynumer<kolor1){document.getElementById('wynik3').innerHTML="Ciemniej"}
+		else {document.getElementById('wynik3').innerHTML="Jaśniej"}
+	}
+	function ciemniej() {
+		kolor1=kolor1-1;
+		kwadrat2.style.backgroundColor = ("rgb("+kolor1+"%,"+kolor1+"%,"+kolor1+"%)");
+		document.getElementById('wynik2').innerHTML="Kwadrat edytowany "+kolor1;
+		if(losowynumer==kolor1){document.getElementById('wynik3').innerHTML="Równe Wartości"}
+		else if(losowynumer<kolor1){document.getElementById('wynik3').innerHTML="Ciemniej"}
+		else {document.getElementById('wynik3').innerHTML="Jaśniej"}
+	}
+	function pokaz() {
+		document.getElementById('wynik1').innerHTML="Kwadrat wylosowany "+losowynumer;
+		document.getElementById('wynik2').innerHTML="Kwadrat edytowany "+kolor1;
+	}
+	</script>
+ </body>
+</html>
+

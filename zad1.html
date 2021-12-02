@@ -1,0 +1,24 @@
+<html>
+    <head>
+		<meta charset="UTF-8">
+		<title>Średnia</title>
+    </head>
+    <body>
+		<script>
+			function funkcja(){
+				let wynik=0;
+				const n=10;
+				for (var i=0;i<n;i++){
+					let a=parseInt(prompt("Podaj liczbę:"));
+					document.write(a+", ")
+					wynik=wynik+a;
+				}
+			wynik=wynik/n;
+			document.write("<br>Średnia arytmetyczna z podanych liczb wynosi: "+wynik)
+			}
+		</script>
+        <form>
+           <button onclick="funkcja()">Oblicz</button>
+        </form>
+    </body>
+</html>

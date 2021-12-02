@@ -1,0 +1,26 @@
+<html>
+    <head>
+    <script>
+        function srednia()
+        {
+            var wynik=0;
+            var dodawanie=0;
+            var ile_liczb = prompt('Podaj ile ma byc liczb');
+            for (var i=0;i<ile_liczb;i++)
+            {
+                var liczba=parseInt(prompt('Podaj liczbe'));
+                dodawanie=dodawanie+liczba;
+            }
+        wynik=dodawanie/ile_liczb;
+        document.getElementById('wynik').innerHTML="Srednia wynosi: "+wynik;
+        return false;
+        }
+    </script>
+    </head>
+    <body>
+        <form id="form" action="">
+            <br/><button onclick="return srednia()">Oblicz</button>
+            <p id="wynik"></p>
+        </form>
+    </body>
+</html>

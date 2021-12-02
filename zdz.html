@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+ <head><meta charset="UTF-8">
+	<style>
+		#div1, #div2{
+            width: 250px;
+            height: 250px;
+            margin-left: 50px;
+            float: left;
+		}
+	</style>
+ </head>
+	<body >
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<div style="clear: both;margin-bottom: 10px;"></div>
+	<form>
+		<input type="button" value="Ustaw kolor" onclick="losuj()"><br><br>
+		<input type="button" value="Jaśniej" onclick="jasniej()">
+		<input type="button" value="Ciemniej" onclick="ciemniej()">
+	</form>
+	<script>
+		var kolor1 = 50;
+		var kwadrat1 = document.getElementById('div1');
+		var kwadrat2 = document.getElementById('div2');
+	function losuj(){
+		var losowynumer = Math.floor(Math.random() * 100);  // 0,8 *100 = 80
+		kwadrat1.style.backgroundColor = "rgb("+losowynumer+"%,"+losowynumer+"%,"+losowynumer+"%)" ;
+		kwadrat2.style.backgroundColor = ("rgb("+kolor1+"%,"+kolor1+"%,"+kolor1+"%)");
+	}
+	function jasniej(){
+		kolor1=kolor1+10;
+		kwadrat2.style.backgroundColor = ("rgb("+kolor1+"%,"+kolor1+"%,"+kolor1+"%)");
+	}
+	function ciemniej() {
+		kolor1=kolor1-10;
+		kwadrat2.style.backgroundColor = ("rgb("+kolor1+"%,"+kolor1+"%,"+kolor1+"%)");
+	}
+	</script>
+ </body>
+</html>
+

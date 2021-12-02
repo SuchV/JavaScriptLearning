@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<script>
+var osoba = {
+//właściwości:
+nazwisko: "Karp",
+imie: "Michał",
+zawod: 'nauczyciel',
+//metoda:
+pokaz: function(){
+    document.write(this.nazwisko+ ' ' + this.imie + '<br>'); //this pozwala odwolac sie
+    //do wlasciwosci i metod wewnątrz obiektu
+    }
+}
+osoba.pokaz();
+//tworzenie nowych wlasciwosci i metod
+osoba.wiek=20;
+osoba.pokaz_wiek=function(){
+    document.write("wiek: " + this.wiek + ' lat');
+}
+osoba.pokaz_wiek();
+</script>
+</body>
+</html>
